@@ -1,7 +1,0 @@
-Forwarding: 
-https://my.webhookrelay.com/v1/webhooks/b7fa121f-f40c-44d2-b23f-70ab9dd18309 -> http://localhost:8080/github-webhook/
-Starting webhook relay agent... 
-2020-03-01 17:13:34.798	INFO	using standard transport...
-2020-03-01 17:13:34.924	INFO	webhook relay ready...	{"host": "my.webhookrelay.com:8080", "buckets": ["ef278bd1-daea-4e98-8e40-8f4aaf90069e"]}
-2020-03-01 17:14:16.531	INFO	webhook request relayed	{"destination": "http://localhost:8080/github-webhook/", "method": "POST", "bucket": "jenkins", "status": "200 OK", "retries": 0}
-2020-03-01 17:18:38.365	INFO	webhook request relayed	{"destination": "http://localhost:8080/github-webhook/", "method": "POST", "bucket": "jenkins", "status": "200 OK", "retries": 0}

@@ -6,17 +6,17 @@
 - include_tasks: setup-Debian.yml
   when: ansible_os_family == 'Debian'
 
-- name: Enable and Start the Jenkins Service
-  service:
-    name: jenkins
-    enabled: yes
-    state: started
-
 - name: Copy config files for Jenkins from file
   copy:
     src: /vagrant/ansible/jenkins/config/config.xml
     dest: /var/lib/jenkins/config.xml
     mode: '0644'
+
+- name: Enable and Start the Jenkins Service
+  service:
+    name: jenkins
+    enabled: yes
+    state: started
 
 - name: Wait for Jenkins to start up
   uri:
