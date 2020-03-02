@@ -10,72 +10,32 @@
     # url: http://localhost:8080
     state: latest
   with_items:
+    - workflow
+    - workflow-job
+    - workflow-scm-step
+    - workflow-aggregator
+    - pipeline
+    - pipeline-stage-view
+    # - pipeline-input-step
+    # - pipeline-model-api
+    # - pipeline-model-declarative-agent
+    # - pipeline-rest-api
+    - build-pipeline-plugin
+    - git
     - checkstyle
     - pmd
     - dashboard-view
     - warnings-ng
-    - view-job-filters
-    - monitoring
-    - job-dsl
-    - build-pipeline-plugin
-    - jenkins-multijob-plugin
-    - workflow-aggregator
-    - antisamy-markup-formatter
-    - git
-    - github-pullrequest
-    - ace-editor
-    - build-name-setter
-    - build-timeout
-    - credentials
-    - copyartifact
-    - cloudbees-folder
-    - config-file-provider
-    - conditional-buildstep
-    - embeddable-build-status
-    - credentials-binding
-    - display-url-api
-    - git-client
-    - github
-    - jdk-tool
-    - junit
-    - parameterized-trigger
-    - pipeline-input-step
-    - pipeline-model-api
-    - pipeline-model-declarative-agent
-    - pipeline-rest-api
-    - pipeline-stage-view
-    - scm-api
-    - script-security
-    - ssh-credentials
-    - ssh-slaves
-    - structs
-    - ssh-agent
-    - rebuild
-    - msbuild
-    - ant
-    - ldap
-    - gradle
-    - nodejs
-    - cobertura
-    - htmlpublisher
-    - warnings
-    - xunit
-    - email-ext
-    - mailer
-    - ssh
-    - publish-over-ssh
-    - emailext-template
-    - active-directory
-    - role-strategy
     - timestamper
-    - token-macro
-    - trilead-api
-    - workflow-job
-    - workflow-scm-step
+    - copyartifact
+    # - git-client
+    - github
+    - warnings
     - ws-cleanup
-    - workflow-support
-    - docker-plugin
-    - docker-compose-build-step
+    # - workflow-support
+    # - job-dsl
+    - scm-api
+
 
 - name: Restart Jenkins service
   service:

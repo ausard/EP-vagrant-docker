@@ -5,43 +5,27 @@
   become: yes
   gather_facts: yes
 
-  roles:
-    - docker
-    - jenkins
-
   tasks:
+  - name: install python 2
+    raw: which python || (apt -y update && apt install -y python-minimal)
+    when: ansible_os_family == 'Debian'
+
+  - name: install python 2
+    raw: which python || (yum -y update && yum install -y python-minimal)
+    when: ansible_os_family == 'RedHat'
+
+  - name: Set timezone to Europe/Minsk
+    timezone:
+      name: Europe/Minsk
+
   - name: Create a directory if it does not exist
     file:
       path: /wordpress
       state: directory
       mode: '0777'
-# tasks:
-#
-#   - name: Create a network for containers
-#     docker_network:
-#       name: ps
-#
-#   - name: Launch database container
-#     docker_container:
-#       name: db
-#       image: postgres
-#       restart: yes
-#       env:
-#         POSTGRES_PASSWORD: "{{ ansible_env.POSTGRES_PASSWORD }}"
-#       ports:
-#         - 5432:5432
-#       networks:
-#         - name: ps
-#
-#   - name: Launch pgAdmin container
-#     docker_container:
-#       name: pgadmin
-#       image: dpage/pgadmin4
-#       restart: yes
-#       env:
-#         PGADMIN_DEFAULT_EMAIL: "{{ ansible_env.PGADMIN_DEFAULT_EMAIL }}"
-#         PGADMIN_DEFAULT_PASSWORD: "{{ ansible_env.PGADMIN_DEFAULT_PASSWORD }}"
-#       ports:
-#         - 5050:80
-#       networks:
-#         - name: ps
+
+  - include_role:
+      name: docker
+
+  - include_role:
+      name: jenkins

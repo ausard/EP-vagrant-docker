@@ -14,11 +14,11 @@ Vagrant.configure("2") do |config|
     end
   end
 
-  if BOX_BASE == "ubuntu/bionic64"
-    config.vm.provision "shell" do |shell|
-      shell.inline = "which python || sudo apt -y install python"
-    end
-  end
+  # if BOX_BASE == "ubuntu/bionic64"
+  #   config.vm.provision "shell" do |shell|
+  #     shell.inline = "which python || sudo apt -y install python"
+  #   end
+  # end
 
   if BOX_BASE == "centos/7"
     config.vm.provision "shell" do |shell|
