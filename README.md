@@ -34,7 +34,7 @@ After install Jenkins open your browser on [localhost]
 
 ## Extra mile:
 ### Deploy_Wordpress_with_ansible:  
-    This job to deploy and update the containers use ansible playbook.
+  This job to deploy and update the containers use ansible playbook.
 
 
 ---
