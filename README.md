@@ -21,7 +21,7 @@ git clone https://github.com/ausard/EP_tsk.git
 cd EP_tsk
 .\jenkins.bat
 ```
-Select 1 or 2 or 3 number of a release for Vagrant
+Select 1 or 2 number of a release for Vagrant
 
 After install Jenkins open your browser on [localhost]
 

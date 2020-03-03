@@ -6,12 +6,12 @@
   gather_facts: yes
 
   tasks:
-  - name: install python 2
-    raw: which python || (apt -y update && apt install -y python-minimal)
+  - name: install python
+    raw: which python || (apt -y update && apt install -y python)
     when: ansible_os_family == 'Debian'
 
-  - name: install python 2
-    raw: which python || (yum -y update && yum install -y python-minimal)
+  - name: install python 
+    raw: which python || (yum -y update && yum install -y python)
     when: ansible_os_family == 'RedHat'
 
   - name: Set timezone to Europe/Minsk

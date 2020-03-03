@@ -1,14 +1,10 @@
-# - name: Installing repo for Java 8 in Ubuntu
-#   apt_repository:
-#     repo: ppa:openjdk-r/ppa
-
 - name: Install required jenkins packages
   apt:
     name: "{{ item }}"
     state: present
     update_cache: yes
-  loop: ['python3','openjdk-8-jdk', 'git', 'maven', 'python-pip'] 
-    
+  loop: ['openjdk-8-jdk', 'python-pip']
+
 - name: Import Jenkins Key
   apt_key:
     url: https://pkg.jenkins.io/debian/jenkins-ci.org.key

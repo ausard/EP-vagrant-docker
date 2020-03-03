@@ -14,18 +14,6 @@ Vagrant.configure("2") do |config|
     end
   end
 
-  # if BOX_BASE == "ubuntu/bionic64"
-  #   config.vm.provision "shell" do |shell|
-  #     shell.inline = "which python || sudo apt -y install python"
-  #   end
-  # end
-
-  if BOX_BASE == "centos/7"
-    config.vm.provision "shell" do |shell|
-      shell.inline = "which python || sudo yum -y install python"
-    end
-  end
-
   config.vm.provision "ansible_local" do |ansible|
     ansible.inventory_path = "ansible/inventory"
     ansible.playbook = "ansible/playbook.yml"

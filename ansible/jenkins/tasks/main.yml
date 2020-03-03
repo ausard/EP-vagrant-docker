@@ -31,7 +31,7 @@
     'status' in jenkins_service_status and
     jenkins_service_status['status'] == 200
 
-- name: Add the user 'jenkins' with a specific uid and add to groups
+- name: Add the user 'jenkins' to groups root and docker
   user:
     name: jenkins
     comment: jenkins

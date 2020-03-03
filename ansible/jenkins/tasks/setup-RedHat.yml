@@ -1,11 +1,9 @@
+
 - name: Install required jenkins packages
   yum:
-    name:
-    - wget
-    - java-1.8.0-openjdk
-    - git
-    - maven
-    - python-pip
+    name: "{{ item }}"
+  loop: ['wget', 'java-1.8.0-openjdk', 'git', 'python-pip']
+
 
 - name: Import Jenkins key and download jenkins.repo
   yum_repository:

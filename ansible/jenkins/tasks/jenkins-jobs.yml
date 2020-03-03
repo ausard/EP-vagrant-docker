@@ -3,6 +3,7 @@
     name:
     - python-jenkins
     - lxml
+    - docker
 
 - name: Install plugin for Jenkins without authentication
   jenkins_plugin:
@@ -13,27 +14,14 @@
     - workflow
     - workflow-job
     - workflow-scm-step
-    - workflow-aggregator
     - pipeline
-    - pipeline-stage-view
-    # - pipeline-input-step
-    # - pipeline-model-api
-    # - pipeline-model-declarative-agent
-    # - pipeline-rest-api
+    # - pipeline-stage-view
     - build-pipeline-plugin
     - git
-    - checkstyle
-    - pmd
-    - dashboard-view
-    - warnings-ng
     - timestamper
-    - copyartifact
-    # - git-client
     - github
-    - warnings
     - ws-cleanup
-    # - workflow-support
-    # - job-dsl
+    - workflow-aggregator
     - scm-api
 
 
@@ -55,27 +43,29 @@
     'status' in jenkins_service_status and
     jenkins_service_status['status'] == 200
 
-- name: Create a jenkins job without authentication
-  jenkins_job:
-    config: "{{ lookup('file', 'jobs/job.xml') }}"
-    name: EP-tsk
-    url: http://localhost:8080
-
-- name: Create a jenkins job without authentication
+- name: Create a jenkins job Deploy_wordpress
   jenkins_job:
     config: "{{ lookup('file', 'jobs/deploy_wp.xml') }}"
     name: Deploy_wordpress
     url: http://localhost:8080
 
-- name: Create a jenkins job without authentication
+- name: Create a jenkins job Checkout_configs
   jenkins_job:
     config: "{{ lookup('file', 'jobs/check_conf.xml') }}"
     name: Checkout_configs
     url: http://localhost:8080
 
+- name: Create a jenkins job Deploy_Wordpress_with_ansible
+  jenkins_job:
+    config: "{{ lookup('file', 'jobs/wp_ansible.xml') }}"
+    name: Deploy_Wordpress_with_ansible
+    url: http://localhost:8080
 
-- name: script for webhook
-  shell: |
-    chmod +x /vagrant/scripts/webhook.sh
-    sh /vagrant/scripts/webhook.sh
-    exit 0
+- name: chmod for our script webhook
+  file:
+    path: /vagrant/scripts/webhook.sh
+    state: touch
+    mode: u+x,g+x,o+x
+
+- name: Script for webhook
+  shell: /vagrant/scripts/webhook.sh
