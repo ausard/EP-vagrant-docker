@@ -13,7 +13,7 @@
 │   │       └── <b>[main.yml](https://github.com/ausard/vagrant_for_wp/blob/master/ansible/docker/tasks/main.yml)</b> :  playbook for install docker
 │   ├── jenkins : folder with role for install jenkins  
 │   │   ├── config  
-│   │   │   └── <b>[config.xml](https://github.com/ausard/EP_tsk/blob/master/ansible/jenkins/config/config.xml)</b> : initial config for Jenkins  
+│   │   │   └── <b>[config.xml](https://github.com/ausard/vagrant_for_wp/blob/master/ansible/jenkins/config/config.xml)</b> : initial config for Jenkins  
 │   │   ├── jobs  
 │   │   │   ├── <b>[deploy_wp.xml](https://github.com/ausard/vagrant_for_wp/blob/master/ansible/jenkins/jobs/wp_ansible.xml)</b> : This job to deploy the WordPress site with the latest WordPress version
 |   |   |   ├── <b>[check_conf.xml](https://github.com/ausard/vagrant_for_wp/blob/master/ansible/jenkins/jobs/deploy_wp.xml)</b> : This job to update the containers once any configuration changes are committed  

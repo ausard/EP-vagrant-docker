@@ -4,8 +4,8 @@
 Problems can occur when installing Jenkins plugins if you have a poor internet connection.  
 This causes "Connection failure: timed out" errors. It is recommended that you repeat this action again.  
 
-<img src="https://github.com/ausard/EP_tsk/blob/master/docs/images/connection_failure.png">  
-<img src="https://github.com/ausard/EP_tsk/blob/master/docs/images/CSRF.png">  
+<img src="https://github.com/ausard/vagrant_for_wp/blob/master/docs/images/connection_failure.png">  
+
 
 ----
 ### Please retry Install Jenkins
@@ -19,7 +19,7 @@ make retry
 ```
 .\jenkins.bat
 ```
-and select 5) Retry provision Vagrant if error in ansible playbook or ect.
+and select Retry provision Vagrant if error in ansible playbook or ect.
 
 ----
 ### Reload VM
@@ -33,7 +33,7 @@ make reload
 ```
 .\jenkins.bat
 ```
-and select 4) Reload Virtual machine
+and select  Reload Virtual machine
 
 ----
 ### Stop  the virtual machine:
@@ -47,7 +47,7 @@ make stop
 ```
 .\jenkins.bat
 ```
-and select 7) Stop Virtual machine
+and select Stop Virtual machine
 
 ----
 ### Finishing work with a virtual machine:
@@ -61,5 +61,4 @@ make delete
 ```
 .\jenkins.bat
 ```
-and select 6) Destroy Virtual machine
-
+and select Destroy Virtual machine

@@ -24,16 +24,16 @@ Select 1 or 2 number of a release for Vagrant machine
 
 After install Jenkins open your browser on [localhost]
 
-We have three jobs:
+## We have three jobs:
 
-## Deploy_wordpress:   
+### Deploy_wordpress:   
   This job to deploy the WordPress site with the latest WordPress version.
 
-## Checkout_configs:  
+### Checkout_configs:  
   This job to update the containers once any configuration changes are committed.
 
-#### Extra mile
-## Deploy_Wordpress_with_ansible:  
+## Extra mile:
+### Deploy_Wordpress_with_ansible:  
     This job to deploy and update the containers use ansible playbook.
 
 
