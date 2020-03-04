@@ -9,15 +9,15 @@
 If you want to build system right away there are two options:
 ##### You work on Linux:
 ```
-git clone https://github.com/ausard/vagrant_for_wp.git
-cd vagrant_for_wp
+git clone https://github.com/ausard/EP-vagrant-docker.git
+cd EP-vagrant-docker
 make init
 ```
 
 ##### You work on Windows:
 ```
-git clone https://github.com/ausard/vagrant_for_wp.git
-cd vagrant_for_wp
+git clone https://github.com/ausard/EP-vagrant-docker.git
+cd EP-vagrant-docker
 .\jenkins.bat
 ```
 Select 1 or 2 number of a release for Vagrant machine
@@ -40,8 +40,8 @@ After install Jenkins open your browser on [localhost]
 ---
 ## Documentation
 
-* [User documentation](https://github.com/ausard/vagrant_for_wp/blob/master/docs/Documentation.md)
-* [Troubleshooting Guide](https://github.com/ausard/vagrant_for_wp/blob/master/docs/Support.md)
+* [User documentation](https://github.com/ausard/EP-vagrant-docker/blob/master/docs/Documentation.md)
+* [Troubleshooting Guide](https://github.com/ausard/EP-vagrant-docker/blob/master/docs/Support.md)
 
 
 [localhost]: http://localhost:8080/
